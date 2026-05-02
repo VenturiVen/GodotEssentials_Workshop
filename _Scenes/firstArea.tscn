@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://chvflhdhi0kyk"]
+[gd_scene format=3 uid="uid://chvflhdhi0kyk"]
 
 [ext_resource type="PackedScene" uid="uid://cde3dsqqgtc5i" path="res://_Scenes/player.tscn" id="1_cko3r"]
-[ext_resource type="Script" path="res://Scripts/first_area.gd" id="1_o61h4"]
+[ext_resource type="Script" uid="uid://c02b6aptnrdfi" path="res://Scripts/first_area.gd" id="1_o61h4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_448w4"]
 size = Vector2(50, 720)
@@ -12,46 +12,46 @@ size = Vector2(1280, 50)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wa1pw"]
 size = Vector2(1297, 50)
 
-[node name="FirstArea" type="Node2D"]
+[node name="FirstArea" type="Node2D" unique_id=1186155850]
 script = ExtResource("1_o61h4")
 
-[node name="Player" parent="." instance=ExtResource("1_cko3r")]
+[node name="Player" parent="." unique_id=977437452 instance=ExtResource("1_cko3r")]
 position = Vector2(649, 382)
 
-[node name="Border" type="Node2D" parent="."]
+[node name="Border" type="Node2D" parent="." unique_id=1421306772]
 
-[node name="LeftSide" type="StaticBody2D" parent="Border"]
+[node name="LeftSide" type="StaticBody2D" parent="Border" unique_id=755732833]
 collision_layer = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/LeftSide"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/LeftSide" unique_id=1234316256]
 position = Vector2(-23, 363)
 shape = SubResource("RectangleShape2D_448w4")
 
-[node name="RightSide" type="StaticBody2D" parent="Border"]
+[node name="RightSide" type="StaticBody2D" parent="Border" unique_id=819518263]
 collision_layer = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/RightSide"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/RightSide" unique_id=1643795305]
 position = Vector2(1297, 361)
 shape = SubResource("RectangleShape2D_448w4")
 
-[node name="Bottom" type="StaticBody2D" parent="Border"]
+[node name="Bottom" type="StaticBody2D" parent="Border" unique_id=1570904724]
 collision_layer = 3
 collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/Bottom"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/Bottom" unique_id=1793746100]
 position = Vector2(642, 740)
 shape = SubResource("RectangleShape2D_dpvba")
 
-[node name="Top" type="StaticBody2D" parent="Border"]
+[node name="Top" type="StaticBody2D" parent="Border" unique_id=1423308527]
 collision_layer = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/Top"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/Top" unique_id=180922504]
 position = Vector2(645, -22)
 shape = SubResource("RectangleShape2D_wa1pw")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=1187800055]
 autostart = true
 
-[node name="Enemies" type="Node2D" parent="."]
+[node name="Enemies" type="Node2D" parent="." unique_id=694634033]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

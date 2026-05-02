@@ -3,7 +3,7 @@
 # To leave a comment, prefix a line with a '#'
 
 # This means we are getting the attributes of a CharacterBody2D 
-# (Our 'Player' node is a CharacterBody2D)
+# (Our 'Player' node is a node of type CharacterBody2D)
 extends CharacterBody2D
 
 
